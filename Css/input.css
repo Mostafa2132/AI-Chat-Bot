@@ -1,0 +1,56 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body{
+  font-family: "Rubik", sans-serif;
+}
+
+
+
+
+.container h1{
+  font-size: 72px;
+  background: linear-gradient(to right , #4285f4, #d96570);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+
+
+.input_wrapper input{
+  padding: 17px 50px 17px 25px ;
+}
+
+.input_wrapper input:valid ~ button {
+  opacity: 1;
+}
+
+.message .loading {
+  width: 100%;
+  display: none;
+  flex-direction: column;
+  gap: 10px;
+}
+.message.loading .loading{
+  display: flex;
+}
+.message .loading .loading_Bar{
+  height: 11px;
+  width:100% ;
+  background: linear-gradient(to right , #4285f4 , #242424 , #4285f4);
+  background-position: -800px 0 ;
+  animation: loading 3s linear infinite;
+}
+.message .loading .loading_Bar:last-child{
+  width: 70%;
+}
+@keyframes loading {
+  0%{
+    background-position: -800px 0 ;
+  }
+  100%{
+    background-position: 800px 0 ;
+  }
+
+}
